@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PunkSecrets</title>
+    <link rel="icon" type="image/x-icon" href="corepunk_logo.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="nav-tabs">
+        <div class="nav-section nav-section-left">
+            <a href="#" class="nav-tab">Карта</a>
+            <a href="#" class="nav-tab">Квесты</a>
+            <a href="#" class="nav-tab">Гайды</a>
+            <div class="nav-separator"></div>
+            <a href="#" class="nav-tab">Новости</a>
+        </div>
+        <div class="nav-logo">
+            <a href="#" class="logo-link">
+                <img src="corepunk_logo.ico" alt="PunkSecrets" class="logo-image">
+            </a>
+        </div>
+        <div class="nav-section nav-section-right">
+            <div class="nav-separator"></div>
+            <a href="#" class="nav-tab">Калькулятор талантов</a>
+            <a href="#" class="nav-tab">Русификатор</a>
+        </div>
+    </nav>
+    
+    <div id="content">
+        <div id="map" class="content-section active-content">
+            <div id="map-frame">
+                <img src="frame.svg" alt="Map Frame" />
+            </div>
+
+            <div class="map-sidebar">
+                <button class="sidebar-toggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="sidebar-content">
+                    <div class="sidebar-title">PunkSecrets</div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск по карте...">
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="category">
+                            <div class="category-header collapsed">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Локации</span>
+                            </div>
+                            <div class="category-items" style="display: none;">
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Костры
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Святилище
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Подземелья
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Дома
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <div class="category-header collapsed">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Активности</span>
+                            </div>
+                            <div class="category-items" style="display: none;">
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Квесты
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Боссы
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Хранитель душ
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="category">
+                            <div class="category-header collapsed">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Ресурсы</span>
+                            </div>
+                            <div class="category-items" style="display: none;">
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Руда
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Травы
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Сундуки
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="quests" class="content-section">
+            <div class="coming-soon">Скоро</div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="guides" class="content-section">
+            <div class="coming-soon">Скоро</div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="talents" class="content-section">
+            <div class="calculator-title">Калькулятор талантов Corepunk</div>
+            <div class="calculator-container">
+                <iframe class="talent-calculator-frame" src="https://corepunkers.com/talent-calculator" frameborder="0"></iframe>
+            </div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="russificator" class="content-section">
+            <div class="coming-soon">Скоро</div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="news" class="content-section">
+            <div class="coming-soon">Скоро</div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="talent-calculator" class="content-section">
+            <h1 class="calculator-title">Калькулятор талантов Corepunk</h1>
+            <div class="calculator-container">
+                <iframe 
+                    src="https://corepunkers.com/talent-calculator" 
+                    frameborder="0" 
+                    class="talent-calculator-frame"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="russification" class="content-section">
+            <div class="coming-soon">Скоро</div>
+            <div class="bottom-nav">
+                <div class="copyright-container">
+                    <span class="copyright">&copy;</span><span class="year">2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="music-control">
+        <button id="toggleMusic">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+/* Общие стили в стиле игровых сайтов */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PostApo', sans-serif;
+    background-color: #0a0a0f;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-top: 60px;
+}
+
+/* Навигационная панель */
+.nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 36px;
+}
+
+.nav-section-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-section-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-tab {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'PostApo', sans-serif;
+    font-size: 16px;
+    transition: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.nav-tab:hover {
+    color: #ffffff;
+}
+
+.nav-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-tab:hover::after {
+    opacity: 1;
+}
+
+.nav-tab.active {
+    color: #ffffff;
+}
+
+.nav-tab.active::after {
+    opacity: 1;
+}
+
+.nav-separator {
+    width: 1px;
+    height: 20px;
+    background-color: #4a4a5a;
+    margin: 0 10px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 35px;
+    width: auto;
+    filter: brightness(1.2) contrast(1.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
+}
+
+/* Контентные секции */
+.content-section {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#quests, #guides, #news, #talents {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#russificator {
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon {
+    font-size: 48px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+/* Калькулятор талантов */
+.calculator-title {
+    text-align: center;
+    font-size: 36px;
+    color: #4a90e2;
+    margin: 20px 0;
+    text-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+.talent-calculator-frame {
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100vh - 200px);
+    border: 2px solid #4a4a5a;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.3);
+    margin: 0 auto;
+}
+
+/* Нижняя навигация */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a0a0b0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    z-index: 1000;
+    border-top: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.copyright-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Карта */
+#map {
+    background: #0a0a0f;
+}
+
+/* Header and Navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(26, 31, 46, 0.95);
+    border-bottom: 2px solid #ea580c;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ea580c;
+}
+
+.twitter-icon {
+    height: 16px;
+    margin-left: 5px;
+}
+
+.connexion-btn a {
+    background-color: #ea580c;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.connexion-btn a:hover {
+    background-color: #c2410c;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1f2e;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #ea580c;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ad Notice */
+.ad-notice {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(26, 31, 46, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #ea580c;
+    text-align: center;
+    max-width: 500px;
+    z-index: 1000;
+}
+
+.ad-notice p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* Calculator Styles */
+.calculator-container {
+    width: 100%;
+    height: calc(100vh - 150px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.talent-calculator-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.calculator-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'PostApo', sans-serif;
+}
+
+.talent-trees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+@font-face {
+    font-family: 'PostApo';
+    src: url('PostApo-Broken.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Map Styles */
+#map-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    clip-path: inset(50px 0 0 0); /* Обрезаем верхние 50px */
+}
+
+#map-frame img {
+    width: 100vw;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+}
+
+/* Navigation Tabs Styles */
+.nav-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Content Sections Styling */
+.content-section {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Talent Calculator */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 23px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-container {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.bottom-nav .copyright {
+    font-family: Arial, sans-serif;
+    line-height: 1;
+}
+
+.bottom-nav .year {
+    font-family: 'PostApo', sans-serif;
+    line-height: 1;
+}
+
+#map .bottom-nav {
+    display: none;
+}
